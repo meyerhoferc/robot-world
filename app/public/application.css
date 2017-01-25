@@ -1,1 +1,28 @@
+body {
+  background-color: lavender;
+}
 
+a {
+  font-size: 18px;
+  color: blue;
+}
+
+a:hover {
+  color: magenta;
+}
+
+h1, h3, h4, h5 {
+  text-align: center;
+}
+
+.menu {
+  text-align: center;
+}
+
+.section {
+  display: inline-block;
+}
+
+.robot {
+  display: center;
+}

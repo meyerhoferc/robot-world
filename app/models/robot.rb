@@ -42,5 +42,4 @@ class Robot
   def self.destroy(id)
     database.execute("DELETE FROM robots where id = ?;", id)
   end
-
 end
