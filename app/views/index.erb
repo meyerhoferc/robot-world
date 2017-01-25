@@ -1,16 +1,18 @@
 <h1>My Robots</h1>
 
 <% @robots.each do |robot| %>
-  <section class='profile'>
+  <section class='row well'>
+    <img src='https://robohash.org/<%=robot.name%>' alt='avatar' class='col'>
     <h2><a href="/robots/<%= robot.id %>"><%= robot.name %></a></h2>
-    <img src='https://robohash.org/<%=robot.name%>' alt='avatar' class='robot'>
-    <p>Name: <%= robot.name %></p>
-    <p>From: <%= robot.city %>, <%= robot.state %></p>
-    <p>Department: <%= robot.department %></p>
+    <div class='col-sm-4'>
+      <p>Name: <%= robot.name %></p>
+      <p>From: <%= robot.city %>, <%= robot.state %></p>
+      <p>Department: <%= robot.department %></p>
+    </div>
     <a href="/robots/<%= robot.id %>/edit">Edit</a>
     <form action='/robots/<%= robot.id %>' method="POST">
       <input type="hidden" name="_method" value="DELETE" />
-      <input type="submit" value="delete" />
+      <input class='btn btn-warning' type="submit" value="delete" />
     </form>
   </section>
 <% end %>
